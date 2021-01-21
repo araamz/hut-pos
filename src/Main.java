@@ -4,18 +4,24 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import Model.terminal;
+import View.View;
+
+import java.io.IOException;
 
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        StackPane root = new StackPane();
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
+    public void start(Stage primaryStage) throws Exception {
+
+        new View();
+
     }
 
     public static void main(String[] args) {
+
+        terminal cash_one = new terminal("register_one");
+
 
         launch(args);
 
